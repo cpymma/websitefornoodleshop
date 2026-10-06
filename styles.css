@@ -83,7 +83,7 @@ a {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&q=80&w=1920') no-repeat center center/cover;
+    background: url('https://lh3.googleusercontent.com/grass-cs/AABkmLf0nMb-Uz8CoG1cEjsvulbUcoPCsFAx0rvJcP5a27EMqPedy88DsdTaBIgyfE-6kRFO9tG8GUblp6Dxfkzkj4-R9LMK4f87DSH4CrsuRpI2I8cHgCKUYX_pJYxj6Dz5xMcEIMr-=w1920-h1080-n-k-no') no-repeat center center/cover;
     position: relative;
     display: flex;
     align-items: center;
