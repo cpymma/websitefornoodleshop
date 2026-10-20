@@ -3,30 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>龍鳳同心億麵攤 | 台南巷弄隱藏版古早味</title>
+    <title>龍鳳同心億麵館 | 台南巷弄隱藏版古早味牛肉麵、滷豬排麵、手作水餃</title>
+    <meta name="description" content="台南北區隱藏版在地美食「龍鳳同心億麵館」，位於南園街23號。招牌紅燒牛肉麵、滷豬排麵、古早味肉燥麵、手工香芹虱目魚水餃、招牌滷味拼盤，平價美味、用料實在，提供內用與外帶。">
+    <meta name="keywords" content="龍鳳同心億麵館, 龍鳳同心億麵攤, 台南美食, 台南牛肉麵, 北區美食, 南園街美食, 滷豬排麵, 古早味麵攤, 台南小吃">
+    <meta name="theme-color" content="#d35400">
+
+    <!-- Open Graph for Facebook & LINE preview -->
+    <meta property="og:type" content="restaurant">
+    <meta property="og:title" content="龍鳳同心億麵館 | 台南巷弄隱藏版古早味">
+    <meta property="og:description" content="隱身台南南園街的平價暖心麵館！招牌牛肉麵、滷豬排麵、肉燥乾麵與多樣入味滷味。提供電話預訂外帶與內用。">
+    <meta property="og:image" content="asset/beef-noodle.png">
+    <meta property="og:locale" content="zh_TW">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Schema.org JSON-LD Structured Data for Local Restaurant -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "龍鳳同心億麵館",
+      "alternateName": "龍鳳同心億麵攤",
+      "image": "asset/beef-noodle.png",
+      "telephone": ["+886-6-235-5862", "+886-981-786-185"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "南園街23號",
+        "addressLocality": "台南市",
+        "addressRegion": "北區",
+        "postalCode": "704",
+        "addressCountry": "TW"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 23.0087697,
+        "longitude": 120.2215967
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Saturday", "Sunday"],
+          "opens": "10:30",
+          "closes": "14:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Saturday", "Sunday"],
+          "opens": "16:00",
+          "closes": "20:00"
+        }
+      ],
+      "servesCuisine": "Taiwanese",
+      "priceRange": "$"
+    }
+    </script>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header / Navbar -->
     <header class="hero">
         <div class="hero-overlay"></div>
-        <nav class="navbar">
-            <div class="logo">同心億麵館</div>
-            <ul class="nav-links">
-                <li><a href="#about">關於我們</a></li>
-                <li><a href="#menu">招牌美味</a></li>
-                <li><a href="#info">營業資訊</a></li>
-            </ul>
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <a href="#" class="logo">龍鳳同心億麵館</a>
+                <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="切換選單" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#about">關於我們</a></li>
+                    <li><a href="#menu">招牌美味</a></li>
+                    <li><a href="#menu-sheet">紙本菜單</a></li>
+                    <li><a href="#gallery">實拍分享</a></li>
+                    <li><a href="#info">營業資訊</a></li>
+                </ul>
+            </div>
         </nav>
         <div class="hero-content">
-            <h1>龍鳳同心億麵攤</h1>
+            <div id="hero-status-badge" class="status-badge">
+                <span class="status-dot"></span>
+                <span class="status-text">載入營業狀態中...</span>
+            </div>
+            <h1>龍鳳同心億麵館</h1>
             <p>隱身台南巷弄的溫馨麵館，傳承古早味的真誠與感動</p>
-            <a href="#about" class="btn">探索美味</a>
+            <div class="hero-actions">
+                <a href="tel:062355862" class="btn btn-call"><i class="fas fa-phone-alt"></i> 電話訂餐</a>
+                <a href="https://maps.google.com/?q=龍鳳同心億麵攤" target="_blank" rel="noopener" class="btn btn-map"><i class="fas fa-location-arrow"></i> Google 導航</a>
+                <a href="#menu-sheet" class="btn btn-outline"><i class="fas fa-book-open"></i> 查看菜單</a>
+            </div>
         </div>
     </header>
 
@@ -35,12 +102,27 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>用善心煮出的人情味</h2>
-                    <p>「龍鳳同心億麵攤」不僅是一間深受台南在地老饕喜愛的私房小吃，更是一個充滿溫暖與愛心的地方。</p>
-                    <p>老闆一家人平時待人誠懇且熱心，他們將在慈濟所體會到的「感恩、尊重、愛」融入日常的麵攤經營中。在這裡，您不僅能品嚐到最道地的台南古早味，更能感受到老闆親切的問候與滿滿的人情味。每一碗麵，都包含了他們對顧客的用心與祝福。</p>
+                    <span class="sub-heading">在地溫暖小吃</span>
+                    <h2>用誠意與善心，煮出滿滿人情味</h2>
+                    <p>「龍鳳同心億麵館」坐落於台南市北區南園街，是一間深受在地老饕喜愛的私房小吃。沒有華麗喧囂的裝潢，有的是數十年如一日對火候與食材的真摯堅持。</p>
+                    <p>老闆與老闆娘為人真誠親切，每日一早親自熬煮大骨鮮湯、滷製入味軟嫩的豬排與招牌小菜。在這裡，您不僅能嚐到最道地的古早風味，更能感受到親切的問候與家的溫暖。每一碗熱騰騰的麵，都承載著獻給每位顧客的誠意與祝福。</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-fire-alt"></i>
+                            <span>每日慢火熬燉高湯</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-award"></i>
+                            <span>獨門古早秘方滷汁</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-wallet"></i>
+                            <span>親民銅板價格實惠</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&q=80&w=600" alt="溫馨麵攤意象">
+                    <img src="asset/food2.png" alt="龍鳳同心億麵館店景與料理台" loading="lazy">
                 </div>
             </div>
         </div>
@@ -49,25 +131,175 @@
     <!-- Menu Section -->
     <section id="menu" class="menu-section">
         <div class="container">
-            <h2 class="section-title">招牌美味</h2>
+            <div class="section-header text-center">
+                <span class="sub-heading">人氣必點</span>
+                <h2 class="section-title">招牌美味推薦</h2>
+                <p class="section-desc">數十年功力慢火細燉，每道皆是台南在地人心中的暖胃經典</p>
+            </div>
+
             <div class="menu-grid">
-                <!-- Item 1 -->
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&q=80&w=400" alt="滷豬排麵">
-                    <h3>滷豬排麵</h3>
-                    <p>獨家配方滷製的豬排，軟嫩入味，搭配吸滿湯汁的麵條，令人回味無窮。</p>
+                <!-- Item 1: 紅燒牛肉麵 -->
+                <article class="menu-item">
+                    <div class="menu-item-img-wrapper">
+                        <img src="asset/beef-noodle.png" alt="招牌紅燒牛肉麵" loading="lazy">
+                        <span class="price-badge">NT$ 105</span>
+                    </div>
+                    <div class="menu-item-body">
+                        <div class="menu-item-header">
+                            <h3>招牌紅燒牛肉麵</h3>
+                            <span class="tag tag-hot">人氣招牌</span>
+                        </div>
+                        <p>精選大塊牛肉慢火細燉至軟嫩多汁，微辣濃郁湯頭清甜回甘，搭配專用Q彈拉麵，份量厚實超暖心。</p>
+                    </div>
+                </article>
+
+                <!-- Item 2: 滷豬排麵 -->
+                <article class="menu-item">
+                    <div class="menu-item-img-wrapper">
+                        <img src="asset/food4.png" alt="招牌滷豬排麵" loading="lazy">
+                        <span class="price-badge">NT$ 60</span>
+                    </div>
+                    <div class="menu-item-body">
+                        <div class="menu-item-header">
+                            <h3>招牌滷豬排麵</h3>
+                            <span class="tag tag-recommend">老饕必吃</span>
+                        </div>
+                        <p>嚴選厚切豬排以私房秘方慢火滷透，軟嫩多汁鹹香四溢，鋪上青菜與古早味肉燥，銅板價享受大滿足。</p>
+                    </div>
+                </article>
+
+                <!-- Item 3: 肉燥麵 -->
+                <article class="menu-item">
+                    <div class="menu-item-img-wrapper">
+                        <img src="asset/minced-pork-noodle.png" alt="古早味肉燥麵" loading="lazy">
+                        <span class="price-badge">小 NT$ 40 / 大 NT$ 45</span>
+                    </div>
+                    <div class="menu-item-body">
+                        <div class="menu-item-header">
+                            <h3>古早味肉燥麵</h3>
+                            <span class="tag">經典台南味</span>
+                        </div>
+                        <p>傳統手切紅蔥肉燥，肥瘦比例均勻、香醇不油膩，均勻拌開裹滿每一條麵條，乾麵均附熱騰騰大骨清湯。</p>
+                    </div>
+                </article>
+
+                <!-- Item 4: 招牌滷味 -->
+                <article class="menu-item">
+                    <div class="menu-item-img-wrapper">
+                        <img src="asset/food3.png" alt="招牌現切滷味" loading="lazy">
+                        <span class="price-badge">時價 / 依夾取計價</span>
+                    </div>
+                    <div class="menu-item-body">
+                        <div class="menu-item-header">
+                            <h3>招牌現切滷味</h3>
+                            <span class="tag tag-hot">網友一致推</span>
+                        </div>
+                        <p>老饕進店必夾！豆干、海帶、米血、肝連、滷蛋慢火滷透入味，灑上大量新鮮蔥花與甘甜醬汁，是絕配良伴。</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Sheet Section (實體菜單) -->
+    <section id="menu-sheet" class="menu-sheet-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-heading">完整價目</span>
+                <h2 class="section-title">本店紙本菜單</h2>
+                <p class="section-desc">點菜單所有品項與最新單價，提供內用與外帶點餐（點擊圖片可放大查看）</p>
+            </div>
+
+            <!-- Quick price tags highlights -->
+            <div class="price-highlights">
+                <div class="price-cat">
+                    <h4>🍜 麵類推薦</h4>
+                    <ul>
+                        <li><span>紅燒牛肉麵 (湯/微辣)</span><strong>$105</strong></li>
+                        <li><span>牛肉麵 (乾/湯/不辣)</span><strong>大$90 / 小$85</strong></li>
+                        <li><span>招牌餛飩麵 (乾/湯)</span><strong>$65</strong></li>
+                        <li><span>滷豬排麵 (乾/湯)</span><strong>$60</strong></li>
+                        <li><span>古早味肉燥麵 (乾/湯)</span><strong>大$45 / 小$40</strong></li>
+                        <li><span>經典麻醬麵 (乾)</span><strong>大$50 / 小$45</strong></li>
+                    </ul>
                 </div>
-                <!-- Item 2 -->
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&q=80&w=400" alt="麻醬麵">
-                    <h3>經典麻醬麵</h3>
-                    <p>濃郁的芝麻香氣撲鼻而來，醬汁完美包裹每一根麵條，乾麵皆附贈大骨熬製清湯。</p>
+                <div class="price-cat">
+                    <h4>🥟 水餃與飯食</h4>
+                    <ul>
+                        <li><span>香芹虱目魚手工水餃 (10粒)</span><strong>$75</strong></li>
+                        <li><span>招牌韭菜水餃 (10粒)</span><strong>$55</strong></li>
+                        <li><span>高麗菜水餃 (10粒)</span><strong>$45</strong></li>
+                        <li><span>招牌紅油抄手</span><strong>$50</strong></li>
+                        <li><span>肉燥飯 (內用)</span><strong>大$30 / 小$25</strong></li>
+                        <li><span>豬排飯 (內用)</span><strong>$60</strong></li>
+                    </ul>
                 </div>
-                <!-- Item 3 -->
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&q=80&w=400" alt="招牌滷味">
-                    <h3>必點招牌滷味</h3>
-                    <p>網友一致推薦！經過長時間慢火燉煮，滷味極致入味，是搭配麵食的最佳良伴。</p>
+                <div class="price-cat">
+                    <h4>🥣 湯品與茶飲</h4>
+                    <ul>
+                        <li><span>豬血豬腸湯</span><strong>$50</strong></li>
+                        <li><span>招牌餛飩湯</span><strong>$40</strong></li>
+                        <li><span>魚丸湯 / 貢丸湯</span><strong>$30</strong></li>
+                        <li><span>榨菜肉絲湯</span><strong>$30</strong></li>
+                        <li><span>燙青菜</span><strong>$30</strong></li>
+                        <li><span>義豐冬瓜茶 (冰涼古早味)</span><strong>$25</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="menu-sheet-card">
+                <div class="menu-image-container" id="menu-image-btn" role="button" tabindex="0" title="點擊放大菜單">
+                    <img src="asset/menu.jpeg" alt="龍鳳同心億麵館點菜單完整價目表" loading="lazy">
+                    <div class="zoom-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>點擊放大檢視清晰完整點菜單</span>
+                    </div>
+                </div>
+                <p class="menu-sheet-tip text-center"><i class="fas fa-info-circle"></i> 現場提供點菜單劃單，牛肉麵可自選拉麵或細麵，乾麵附清湯</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (顧客實拍相簿) -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-heading">真實美味</span>
+                <h2 class="section-title">顧客實拍分享</h2>
+                <p class="section-desc">老饕與在地客人的真實用餐記錄，色香味俱全（點擊照片可放大欣賞）</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-full="asset/Screenshot from 2026-10-06 13-08-55.png" data-caption="香濃粒粒分明的台南肉燥飯">
+                    <img src="asset/Screenshot from 2026-10-06 13-08-55.png" alt="香濃肉燥飯" loading="lazy" decoding="async">
+                    <div class="gallery-hover"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item" data-full="asset/food1.png" data-caption="古早味乾麵、魚丸湯與現切滷味小菜">
+                    <img src="asset/food1.png" alt="乾麵搭配魚丸湯與滷味" loading="lazy" decoding="async">
+                    <div class="gallery-hover"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item" data-full="asset/Screenshot from 2026-10-06 13-09-09.png" data-caption="滿滿一桌的在地平價美味">
+                    <img src="asset/Screenshot from 2026-10-06 13-09-09.png" alt="顧客實拍餐點" loading="lazy" decoding="async">
+                    <div class="gallery-hover"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item" data-full="asset/Screenshot from 2026-10-06 13-09-18.png" data-caption="大份量招牌麵食與濃醇大骨清湯">
+                    <img src="asset/Screenshot from 2026-10-06 13-09-18.png" alt="招牌麵食分享" loading="lazy" decoding="async">
+                    <div class="gallery-hover"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item" data-full="asset/Screenshot from 2026-10-06 13-09-28.png" data-caption="入味極深的豆干海帶與肝連滷味">
+                    <img src="asset/Screenshot from 2026-10-06 13-09-28.png" alt="招牌滷味特寫" loading="lazy" decoding="async">
+                    <div class="gallery-hover"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item" data-full="asset/Screenshot from 2026-10-06 13-09-40.png" data-caption="熱氣騰騰的現煮牛肉麵">
+                    <img src="asset/Screenshot from 2026-10-06 13-09-40.png" alt="熱騰騰牛肉麵" loading="lazy" decoding="async">
+                    <div class="gallery-hover"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item" data-full="asset/Screenshot from 2026-10-06 13-09-50.png" data-caption="皮薄餡多的手工水餃與牛肉湯餃">
+                    <img src="asset/Screenshot from 2026-10-06 13-09-50.png" alt="水餃實拍" loading="lazy" decoding="async">
+                    <div class="gallery-hover"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item" data-full="asset/food4.png" data-caption="香嫩厚實的滷豬排搭配乾拌麵">
+                    <img src="asset/food4.png" alt="滷豬排麵實拍" loading="lazy" decoding="async">
+                    <div class="gallery-hover"><i class="fas fa-search-plus"></i></div>
                 </div>
             </div>
         </div>
@@ -78,33 +310,54 @@
         <div class="container">
             <div class="info-container">
                 <div class="info-details">
-                    <h2>營業資訊</h2>
+                    <span class="sub-heading">歡迎光臨</span>
+                    <h2>營業資訊與位置</h2>
                     <ul class="info-list">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
-                                <strong>地址</strong>
+                                <strong>門市地址</strong>
                                 <p>台南市北區南園街23號</p>
+                                <a href="https://maps.google.com/?q=龍鳳同心億麵攤" target="_blank" rel="noopener" class="map-link-btn">
+                                    <i class="fas fa-directions"></i> 在 Google 地圖開啟導航
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong>訂餐與洽詢專線</strong>
+                                <p class="phone-group">
+                                    <a href="tel:062355862" class="phone-tag"><i class="fas fa-phone"></i> 市話：(06) 235-5862</a>
+                                    <a href="tel:0981786185" class="phone-tag"><i class="fas fa-mobile-alt"></i> 手機：0981-786-185</a>
+                                </p>
+                                <span class="info-hint">歡迎提前來電預訂外帶，節省現場等候時間</span>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-clock"></i>
                             <div>
                                 <strong>營業時間</strong>
-                                <p>10:30–14:00 / 16:00–20:00<br>(每週五公休)</p>
+                                <p>午餐：10:30–14:00<br>晚餐：16:00–20:00</p>
+                                <p class="rest-day"><i class="fas fa-calendar-times"></i> <strong>每週五固定公休</strong></p>
+                                <div id="info-status-badge" class="status-badge status-badge-inline">
+                                    <span class="status-dot"></span>
+                                    <span class="status-text">計算營業狀態...</span>
+                                </div>
                             </div>
                         </li>
                         <li>
-                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-store"></i>
                             <div>
-                                <strong>服務特色</strong>
-                                <p>價格親民、服務親切，充滿在地人情味</p>
+                                <strong>用餐與付款資訊</strong>
+                                <p>提供內用（設有冷氣座席）與外帶服務；付款方式以現金交易為主。</p>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="info-map">
                     <iframe 
+                        title="龍鳳同心億麵館 Google 地圖"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.408472724996!2d120.2215967!3d23.0087697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e77831b491893%3A0x1aaa2fcfab545788!2z6b6N6bOz5ZCM5b-D5YSE6bq15pSk!5e0!3m2!1szh-TW!2stw!4v1696000000000!5m2!1szh-TW!2stw" 
                         width="100%" 
                         height="100%" 
@@ -121,10 +374,41 @@
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>&copy; 2026 龍鳳同心億麵攤. All rights reserved.</p>
-            <p class="footer-note">感恩、尊重、愛</p>
+            <h3 class="footer-title">龍鳳同心億麵館</h3>
+            <p>台南市北區南園街23號 ｜ 訂餐專線：<a href="tel:062355862" class="footer-tel">(06) 235-5862</a> / <a href="tel:0981786185" class="footer-tel">0981-786-185</a></p>
+            <p class="footer-copy">&copy; 2026 龍鳳同心億麵館. All rights reserved.</p>
+            <p class="footer-note">用善心煮出的人情味 ‧ 傳統古早好滋味</p>
         </div>
     </footer>
+
+    <!-- Mobile Bottom Sticky CTA Bar -->
+    <aside class="mobile-cta-bar" aria-label="行動快捷操作">
+        <a href="tel:062355862" class="cta-btn cta-call">
+            <i class="fas fa-phone-alt"></i>
+            <span>電話訂餐</span>
+        </a>
+        <a href="https://maps.google.com/?q=龍鳳同心億麵攤" target="_blank" rel="noopener" class="cta-btn cta-map">
+            <i class="fas fa-directions"></i>
+            <span>地圖導航</span>
+        </a>
+        <a href="#menu-sheet" class="cta-btn cta-menu">
+            <i class="fas fa-book-open"></i>
+            <span>紙本菜單</span>
+        </a>
+    </aside>
+
+    <!-- Native HTML5 Lightbox Dialog Modal -->
+    <dialog id="image-modal" class="image-modal">
+        <div class="modal-box">
+            <button type="button" class="modal-close" id="modal-close-btn" aria-label="關閉放大視窗">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-image-wrapper">
+                <img id="modal-img" src="" alt="放大預覽">
+            </div>
+            <p id="modal-caption" class="modal-caption"></p>
+        </div>
+    </dialog>
 
     <script src="script.js"></script>
 </body>
